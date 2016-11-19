@@ -6,7 +6,7 @@
 /*   By: afillion <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 21:36:44 by afillion          #+#    #+#             */
-/*   Updated: 2016/11/19 21:36:45 by afillion         ###   ########.fr       */
+/*   Updated: 2016/11/19 21:41:00 by afillion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,10 @@ void	textured_floor(t_env *e, t_col *col)
 void	textured(t_env *e)
 {
 	int		d;
-	t_col	*col;
+	t_col	col;
 
 	d = 0;
 	texel(e);
-	col = (t_col*)malloc(sizeof(t_col));
 	while (e->y < e->end)
 	{
 		d = e->y * 256 - MAP_H * 128 + e->height_line * 128;
@@ -54,10 +53,10 @@ void	textured(t_env *e)
 			e->tex_id = 10;
 		else
 			e->tex_id = e->world_map[e->map_x][e->map_y];
-		get_xpm_pixel(e, col, e->tex_x, e->tex_y);
-		shadow_effect(e, col);
-		put_xpm_pixel_to_image(e, col, e->x, e->y);
+		get_xpm_pixel(e, &col, e->tex_x, e->tex_y);
+		shadow_effect(e, &col);
+		put_xpm_pixel_to_image(e, &col, e->x, e->y);
 		e->y++;
 	}
-	textured_floor(e, col);
+	textured_floor(e, &col);
 }
