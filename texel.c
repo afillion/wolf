@@ -6,7 +6,7 @@
 /*   By: afillion <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 21:36:50 by afillion          #+#    #+#             */
-/*   Updated: 2016/11/19 21:36:54 by afillion         ###   ########.fr       */
+/*   Updated: 2016/11/19 21:55:46 by afillion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,12 +62,12 @@ int		tex_init(t_env *e)
 	load_texture(e, &e->tex_tab[2], "./Texture/bluestone.xpm");
 	load_texture(e, &e->tex_tab[3], "./Texture/eagle.xpm");
 	load_texture(e, &e->tex_tab[4], "./Texture/greystone.xpm");
-	load_texture(e, &e->tex_tab[5], "./Texture/xpm_texts/trees.xpm");
+	load_texture(e, &e->tex_tab[5], "./Texture/trees.xpm");
 	load_texture(e, &e->tex_tab[6], "./Texture/redbrick.xpm");
 	load_texture(e, &e->tex_tab[7], "./Texture/wallbrick.xpm");
 	load_texture(e, &e->tex_tab[8], "./Texture/wood.xpm");
-	load_texture(e, &e->tex_tab[9], "./Texture/xpm_texts/sky.xpm");
-	load_texture(e, &e->tex_tab[10], "./Texture/xpm_texts/housedoor.xpm");
+	load_texture(e, &e->tex_tab[9], "./Texture/sky.xpm");
+	load_texture(e, &e->tex_tab[10], "./Texture/housedoor.xpm");
 	return (0);
 }
 
