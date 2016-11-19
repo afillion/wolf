@@ -46,6 +46,7 @@ void		map(t_env *e)
 
 	save_map(e, mapp);
 }
+
 void		map2(t_env *e)
 {
 	static int	mapp[22][22] = {
