@@ -6,7 +6,7 @@
 /*   By: afillion <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 21:36:34 by afillion          #+#    #+#             */
-/*   Updated: 2016/11/19 21:36:37 by afillion         ###   ########.fr       */
+/*   Updated: 2016/11/19 21:50:00 by afillion         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,21 @@ void	untextured_floor(t_env *e)
 
 void	untextured_color(t_env *e)
 {
+	e->color = 0x009900;
 	if (e->world_map[e->map_x][e->map_y] == 1)
 		e->color = 0xFF0000;
 	if (e->world_map[e->map_x][e->map_y] == 2)
-		e->color = 0x00FF00;
+		e->color = 0x00CC00;
 	if (e->world_map[e->map_x][e->map_y] == 3)
-		e->color = 0x0000FF;
+		e->color = 0xCC6600;
 	if (e->world_map[e->map_x][e->map_y] == 4)
-		e->color = 0xFFFF00;
+		e->color = 0x808080;
 	if (e->world_map[e->map_x][e->map_y] == 5)
 		e->color = 0xEEFF00;
 	if (e->world_map[e->map_x][e->map_y] == 6)
-		e->color = 0xFFEE00;
+		e->color = 0xFF8000;
 	if (e->world_map[e->map_x][e->map_y] == 7)
-		e->color = 0x00FFEE;
+		e->color = 0x330066;
 	if (e->world_map[e->map_x][e->map_y] == 8)
 		e->color = 0xEEEE00;
 	if (e->world_map[e->map_x][e->map_y] == 9)
